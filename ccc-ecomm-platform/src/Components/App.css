@@ -30,9 +30,13 @@ body {
 }
 
 Input {
-  margin: 10px;
+  /* margin: 10px; */
   padding: 10px;
   transition: transform 0.3s;
+}
+
+.emailInput, .passwordInput, .submit-button{
+  margin: 10px;
 }
 
 Input:hover {
@@ -45,3 +49,49 @@ Input:hover {
 }
 
 /* Register and Login Styles End*/
+
+/* Navbar Style Start */
+
+.navbar {
+  /* background: linear-gradient(to right, #e39dff, #5816ff); */
+  background: linear-gradient(to right, #96dfc6, #d2ffe3);
+  /* background-color: #9DDAC6; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar-button{
+  margin: 5px;
+  padding: 5px;
+  transition: transform 0.3s;
+}
+
+.navbar-button:hover{
+  transform: scale(1.1);
+}
+
+.navbar-links {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.navbar-links li {
+  margin-right: 20px;
+}
+
+.navbar-links li a {
+  color: black;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.navbar-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Navbar Style End */

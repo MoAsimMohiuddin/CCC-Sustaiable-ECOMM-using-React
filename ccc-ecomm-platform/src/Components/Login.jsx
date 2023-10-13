@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import Input from "./Input";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useContext } from "react";
+import AuthContext from "../Context/authProvider";
 
 const Login = () => {
   const [emailInput, setEmail] = useState("");
   const [pwdInput, setPwd] = useState("");
   const [err, setErr]=useState('');
   const [errStatus, setErrStatus]=useState(false);
+
+  const useAuth=useContext(AuthContext);
+  const navigate=useNavigate();
 
   const handleChange = (event) => {
     setErrStatus(false);
@@ -34,6 +39,10 @@ const Login = () => {
       );
 
       console.log(response.data);
+
+      useAuth.setAuth({email: emailInput, accessToken: response.data.jwt});
+
+      navigate('/home');
     }catch(err) {
       setErrStatus(true);
 
@@ -53,7 +62,7 @@ const Login = () => {
         <label htmlFor="email">Email</label>
         <Input
           name="email"
-          className="input"
+          className="input emailInput"
           type="email"
           autoComplete="off"
           value={emailInput}
@@ -62,13 +71,13 @@ const Login = () => {
         <label htmlFor="password">Password</label>
         <Input
           name="password"
-          className="input"
+          className="input passwordInput"
           type="password"
           autoComplete="off"
           value={pwdInput}
           onChange={handleChange}
         />
-        <Input type="submit" value="submit"></Input>
+        <Input className="submit-button" type="submit" value="submit"></Input>
         <p>Create New Account?</p>
         <Link to="/register">Register</Link>
       </form>

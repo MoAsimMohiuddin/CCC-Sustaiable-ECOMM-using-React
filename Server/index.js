@@ -16,8 +16,8 @@ app.use(express.json());
 
 app.use('/register', require('./Routes/register'));
 app.use('/login', require('./Routes/login'));
-// app.use('/api', require('./Routes/api'));
-// app.use('/verifytoken', require('./Routes/verifyToken'));
+app.use('/api', require('./Routes/api'));
+app.use('/verifytoken', require('./Routes/verifyToken'));
 
 app.listen(process.env.PORT, ()=>{
     console.log("Listening on Port 4000");

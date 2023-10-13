@@ -60,7 +60,7 @@ const Register = () => {
         <label htmlFor="email">Email</label>
         <Input
           name="email"
-          className="input"
+          className="input emailInput"
           type="email"
           autoComplete="off"
           value={emailInput}
@@ -69,13 +69,13 @@ const Register = () => {
         <label htmlFor="password">Password</label>
         <Input
           name="password"
-          className="input"
+          className="input passwordInput"
           type="password"
           autoComplete="off"
           value={pwdInput}
           onChange={handleChange}
         />
-        <Input type="submit" value="submit"></Input>
+        <Input className="submit-button" type="submit" value="submit"></Input>
         <p>Already Registered?</p>
         <Link to="/login">Login</Link>
       </form>

@@ -14,6 +14,7 @@ const handleLogin = async (req, res) => {
   const model = mongoose.models["users"] || mongoose.model("users", schema);
 
   const user = await model.find({ email: { $eq: `${req.body.email}` } });
+  console.log(user);
   if (user[0]) {
     const match = await bcrypt.compare(req.body.password, user[0].password);
 
