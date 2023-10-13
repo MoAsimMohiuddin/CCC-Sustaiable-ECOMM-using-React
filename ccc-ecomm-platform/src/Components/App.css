@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* Register and Login Styles Start*/
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 7vw;
+  background: linear-gradient(to right, #96dfc6, #d2ffe3);
+  border: 0px solid black;
+  border-radius: 25% 2% 30% 10%;
+}
+
+Input {
+  margin: 10px;
+  padding: 10px;
+  transition: transform 0.3s;
+}
+
+Input:hover {
+  transform: scale(1.1);
+}
+
+.err {
+  text-align: center;
+  color: rgb(82, 0, 0);
+}
+
+/* Register and Login Styles End*/
