@@ -11,11 +11,11 @@ const Card = (props) => {
   const [showNotification, setShowNotification] = useState(false);
 
   const useAuth = useContext(AuthContext);
-  const navigate=useNavigate();
+  const navigate = useNavigate();
 
   const handleAddToCart = async () => {
-    if(!useAuth.auth.accessToken) {
-        navigate('/login');   
+    if (!useAuth.auth.accessToken) {
+      navigate("/login");
     }
 
     console.log("Adding to Cart");
@@ -56,6 +56,9 @@ const Card = (props) => {
 
   return (
     <div className="product">
+      <div className="product-image">
+        <img src={props.image} alt="Product" />
+      </div>
       <h2>{props.name}</h2>
       <p>
         {limitDescription(props.desc)}
@@ -94,6 +97,7 @@ const Products = () => {
   const productsContext = useContext(ProductsContext);
   const { products } = productsContext;
 
+  console.log(products);
   return (
     <div className="cards">
       {products &&
@@ -107,6 +111,7 @@ const Products = () => {
               name={item.name}
               desc={item.desc}
               price={item.price}
+              image={item.url}
             />
           );
         })}
@@ -121,6 +126,7 @@ const Products = () => {
               name={item.name}
               desc={item.desc}
               price={item.price}
+              image="https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt12dbddde5342ce4c/648866ff21a8556da61fa167/GOAL_-_Blank_WEB_-_Facebook_-_2023-06-13T135350.847.png?auto=webp&format=pjpg&width=3840&quality=60"
             />
           );
         })}

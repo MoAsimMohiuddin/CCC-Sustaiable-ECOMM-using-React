@@ -13,22 +13,8 @@ const Sidebar = () => {
   const [brand, setBrand] = useState("");
   const [price, setPrice] = useState(0);
 
-  const { applyFilters, resetFilters, setProducts } = useContext(ProductsContext);
-
-  const fetchProducts=async ()=>{
-    const response = await axios.get("http://localhost:4000/api", {
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "http://localhost:3000",
-        },
-      });
-
-      setProducts(response.data);
-  };
-
-  const resetFilter=()=>{
-    fetchProducts();
-  };
+  const { applyFilters, resetFilters, setProducts } =
+    useContext(ProductsContext);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -52,6 +38,7 @@ const Sidebar = () => {
           <li className="link">
             <a href="#">Log out</a>
           </li>
+          <hr/>
           <li className="link">
             <button onClick={() => setShowForm(!showForm)}>Add Filter</button>
           </li>
@@ -60,10 +47,11 @@ const Sidebar = () => {
           <div>
             <form onSubmit={handleFormSubmit}>
               <label>
-                Choose Brand:
+                <span style={{margin: '10px'}}>Choose Brand:</span>
                 <select
                   value={brand}
                   onChange={(event) => setBrand(event.target.value)}
+                  style={{margin: '20px'}}
                 >
                   <option value="">--Please choose an option--</option>
                   <option value="patagonia">Patagonia</option>

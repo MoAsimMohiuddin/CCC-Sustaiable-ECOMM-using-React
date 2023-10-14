@@ -31,6 +31,20 @@ const Cart = () => {
     }
   };
 
+  const handleBuy=async ()=>{
+    const response=await axios.post(
+        'http://localhost:4000/api/buy',
+        JSON.stringify({email: auth.email}),
+        {
+            headers: {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "http://localhost:3000"
+            }
+        }
+    );
+    console.log(response.data);
+  }
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -69,6 +83,7 @@ const Cart = () => {
                   </li>
                 );
               })}
+          <button className="buy-now" style={{height: '5vh', marginTop: '20px'}} onClick={handleBuy}>Buy Now</button>
           </ul>
           <h1 style={{ textAlign: "center" }}>Total: {price} $</h1>
         </div>

@@ -3,11 +3,13 @@ const url = "mongodb://127.0.0.1:27017/cognidaEcommDB";
 mongoose.connect(url);
 
 const addToCart = async (req, res) => {
+  console.log(req.body);
   const schema = new mongoose.Schema({
     email: String,
     password: String,
     patagoniacart: Array,
     tentreecart: Array,
+    boughtItems: Object,
   });
 
   const model = mongoose.models["users"] || mongoose.model("users", schema);
@@ -29,6 +31,7 @@ const addToCart = async (req, res) => {
             __v: userData["__v"],
             patagoniacart: [...new Set([...userData.patagoniacart, id])],
             tentreecart: userData.tentreecart,
+            boughtItems: userData.boughtItems,
           }
         );
 
@@ -48,6 +51,7 @@ const addToCart = async (req, res) => {
             __v: userData["__v"],
             patagoniacart: [id],
             tentreecart: userData.tentreecart,
+            boughtItems: userData.boughtItems,
           }
         );
 
@@ -69,6 +73,7 @@ const addToCart = async (req, res) => {
             __v: userData["__v"],
             patagoniacart: userData.patagoniacart,
             tentreecart: [...new Set([...userData.tentreecart, id])],
+            boughtItems: userData.boughtItems,
           }
         );
 
@@ -88,6 +93,7 @@ const addToCart = async (req, res) => {
             __v: userData["__v"],
             patagoniacart: userData.patagoniacart,
             tentreecart: [id],
+            boughtItems: userData.boughtItems,
           }
         );
 

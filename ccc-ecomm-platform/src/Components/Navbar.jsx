@@ -6,12 +6,13 @@ import { useNavigate } from "react-router-dom";
 import ProductsContext from "../Context/productsProvider";
 import axios from "axios";
 import Sidebar from "./Sidebar";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const Navbar = () => {
   const { auth } = useContext(AuthContext);
 
   const navigate = useNavigate();
-  const { products, setProducts } = useContext(ProductsContext);
+  const { products, setProducts, setFilteredProducts } = useContext(ProductsContext);
 
   const fetchProducts = async () => {
     try{
@@ -23,6 +24,7 @@ const Navbar = () => {
       });
   
       setProducts(response.data);
+      setFilteredProducts(response.data);
     }catch(err) {
       console.log("err ",err);
       navigate('/login');
@@ -49,6 +51,7 @@ const Navbar = () => {
       };
 
       setProducts(productsUpdated);
+      setFilteredProducts(productsUpdated);
     }else{
       fetchProducts();
     }
@@ -87,6 +90,7 @@ const Navbar = () => {
           };
     
           setProducts(productsUpdated);
+          setFilteredProducts(productsUpdated)
         }catch(err) {
           console.log("Error Broo");
           console.log(err);
@@ -122,9 +126,14 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a className="link" href="/home">
-            Contact us
-          </a>
+        <Link
+            // activeClass="active"
+            to="footer"
+            smooth={true}
+            offset={-500}
+            duration={2000}
+          >Contact Us
+          </Link>
         </li>
       </ul>
 

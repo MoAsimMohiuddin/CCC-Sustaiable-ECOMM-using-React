@@ -56,7 +56,7 @@ const ProductsProvider = ({ children }) => {
 
   return (
     <ProductsContext.Provider
-      value={{ products: filteredProducts, applyFilters, resetFilters, activeFilters, setProducts }}
+      value={{ products: filteredProducts, applyFilters, resetFilters, activeFilters, setProducts, setFilteredProducts }}
     >
       {children}
     </ProductsContext.Provider>

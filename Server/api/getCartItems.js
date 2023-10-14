@@ -41,13 +41,13 @@ const getCartItems=async (req, res)=>{
     const prodArray=[];
     let price=0;
 
-    for(let i=0; i<patagoniaCart.length; i++) {
+    for(let i=0; i<patagoniaCart?.length; i++) {
         const product=await patagoniaModel.findOne({id: {$eq: patagoniaCart[i]}});
         prodArray.push({name: product.name, brand: 'patagonia', id: patagoniaCart[i]});
         price+=product.price;
     }
 
-    for(let i=0; i<tentreeCart.length; i++) {
+    for(let i=0; i<tentreeCart?.length; i++) {
         const product=await tentreeModel.findOne({id: {$eq: tentreeCart[i]}});
         prodArray.push({name: product.name, brand: 'tentree', id: tentreeCart[i]});
         price+=product.price;
