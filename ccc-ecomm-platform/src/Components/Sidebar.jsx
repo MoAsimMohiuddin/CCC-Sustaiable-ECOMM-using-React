@@ -12,6 +12,7 @@ const Sidebar = () => {
   const [showForm, setShowForm] = useState(false);
   const [brand, setBrand] = useState("");
   const [price, setPrice] = useState(0);
+  const [minPrice, setMinPrice] = useState(0);
 
   const { applyFilters, resetFilters, setProducts } =
     useContext(ProductsContext);
@@ -19,7 +20,7 @@ const Sidebar = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    applyFilters({ brand, price });
+    applyFilters({ brand, price, minPrice });
   };
 
   return (
@@ -40,9 +41,10 @@ const Sidebar = () => {
           </li>
           <hr/>
           <li className="link">
-            <button onClick={() => setShowForm(!showForm)}>Add Filter</button>
+            <button className='add-filter' onClick={() => setShowForm(!showForm)}>Add Filter</button>
           </li>
         </ul>
+        <hr/>
         {showForm && (
           <div>
             <form onSubmit={handleFormSubmit}>
@@ -66,6 +68,14 @@ const Sidebar = () => {
                   value={price}
                   onChange={(event) => setPrice(event.target.value)}
                 />
+              </label><br/>
+              <label>
+                Min Price:
+                <input
+                  type="number"
+                  value={minPrice}
+                  onChange={(event) => setMinPrice(event.target.value)}
+                />
               </label>
               <br />
               <button type="submit">Apply Filters</button>
@@ -73,6 +83,7 @@ const Sidebar = () => {
             <button onClick={resetFilters}>Reset Filter</button>
           </div>
         )}
+        <hr/>
         <button className="close-button" onClick={() => setOpened(false)}>
           Close
         </button>

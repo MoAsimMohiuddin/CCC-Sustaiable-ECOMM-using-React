@@ -70,7 +70,7 @@ const Cart = () => {
     fetchData();
   }, []);
 
-  if (auth.email) {
+  if (auth.email && price!==0) {
     return (
       <div className="container">
         <div>
@@ -89,7 +89,11 @@ const Cart = () => {
         </div>
       </div>
     );
-  } else {
+  } else if(price===0) {
+    return(
+        <div className="container"><h1>Cart is Empty</h1></div>
+    )
+  }else {
     return <Navigate to="/login" />;
   }
 };

@@ -25,7 +25,7 @@ const ProductsProvider = ({ children }) => {
   }, []);
 
   const applyFilters = (filters) => {
-    const { brand, price } = filters;
+    const { brand, price, minPrice } = filters;
 
     let filtered = { ...products };
 
@@ -44,8 +44,17 @@ const ProductsProvider = ({ children }) => {
         tentree: filtered.tentree.filter((product) => product.price <= price),
       };
     }
-
     setFilteredProducts(filtered);
+    
+    if(minPrice>0) {
+        filtered={
+            ...filtered,
+            patagonia: filtered.patagonia.filter((product)=> product.price>=minPrice),
+            tentree: filtered.tentree.filter((product)=> product.price>=minPrice)
+        }
+    }
+    setFilteredProducts(filtered);
+
     setActiveFilters({ brand, price });
   };
 

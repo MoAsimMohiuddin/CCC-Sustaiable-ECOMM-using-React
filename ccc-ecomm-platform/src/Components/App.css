@@ -231,6 +231,12 @@ button:hover {
   left: 10px;
 }
 
+.add-filter{
+  width: 18vw;
+  height: 4vh;
+  margin: 0;
+}
+
 /* Navbar Style End */
 
 /* Cards Style Start */
