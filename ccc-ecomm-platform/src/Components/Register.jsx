@@ -53,32 +53,40 @@ const Register = () => {
   };
 
   return (
-    <div className="container" onSubmit={handleSubmit}>
-      <form className="form-container">
-        {errStatus ? <p className="err">{err}</p> : null}
-        <h1>Register</h1>
-        <label htmlFor="email">Email</label>
-        <Input
-          name="email"
-          className="input emailInput"
-          type="email"
-          autoComplete="off"
-          value={emailInput}
-          onChange={handleChange}
-        />
-        <label htmlFor="password">Password</label>
-        <Input
-          name="password"
-          className="input passwordInput"
-          type="password"
-          autoComplete="off"
-          value={pwdInput}
-          onChange={handleChange}
-        />
-        <Input className="submit-button" type="submit" value="submit"></Input>
-        <p>Already Registered?</p>
-        <Link to="/login">Login</Link>
-      </form>
+    <div className="full-container">
+      <div className="heading-container">
+        <h1 className="login-heading">GreenThreads</h1>
+        <h3>
+          Style that respects the Earth - Where fashion meets sustainability.
+        </h3>
+      </div>
+      <div className="container" onSubmit={handleSubmit}>
+        <form className="form-container">
+          {errStatus ? <p className="err">{err}</p> : null}
+          <h1>Register</h1>
+          <label htmlFor="email">Email</label>
+          <Input
+            name="email"
+            className="input emailInput"
+            type="email"
+            autoComplete="off"
+            value={emailInput}
+            onChange={handleChange}
+          />
+          <label htmlFor="password">Password</label>
+          <Input
+            name="password"
+            className="input passwordInput"
+            type="password"
+            autoComplete="off"
+            value={pwdInput}
+            onChange={handleChange}
+          />
+          <Input className="submit-button" type="submit" value="submit"></Input>
+          <p>Already Registered?</p>
+          <Link to="/login">Login</Link>
+        </form>
+      </div>
     </div>
   );
 };

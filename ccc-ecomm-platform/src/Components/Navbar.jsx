@@ -116,12 +116,17 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a className="link" href="/home">
-            Products
-          </a>
+        <Link
+            // activeClass="active"
+            to="cards"
+            smooth={true}
+            offset={-500}
+            duration={2000}
+          >Products
+          </Link>
         </li>
         <li>
-          <a className="link" href="/home">
+          <a className="link" href="#">
             About us
           </a>
         </li>

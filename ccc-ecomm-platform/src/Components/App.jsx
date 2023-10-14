@@ -7,6 +7,7 @@ import Home from "./Home";
 import { ProductsProvider } from "../Context/productsProvider";
 import RequireAuth from "./RequireAuth";
 import Cart from "./Cart";
+import Profile from "./Profile";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
             <ProductsProvider><Home /></ProductsProvider>
           } />
           <Route exact path='/cart' element={<Cart/>}/>
+          <Route exact path='/profile' element={<Profile/>}/>
           <Route exact path="/*" element={<Missing />} />
         </Routes>
       </main>

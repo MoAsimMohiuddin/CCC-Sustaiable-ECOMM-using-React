@@ -33,10 +33,10 @@ const Sidebar = () => {
             <Link to={auth.email ? "/cart" : "/login"}>View Cart</Link>
           </li>
           <li className="link">
-            <a href="#">Profile</a>
+          <Link to={auth.email ? "/profile" : "/login"}>Profile</Link>
           </li>
           <li className="link">
-            <a href="#">Log out</a>
+            <a href="/home">Log out</a>
           </li>
           <hr/>
           <li className="link">

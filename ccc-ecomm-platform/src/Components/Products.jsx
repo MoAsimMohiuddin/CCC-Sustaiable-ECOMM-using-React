@@ -99,7 +99,7 @@ const Products = () => {
 
   console.log(products);
   return (
-    <div className="cards">
+    <div className="cards" id='cards'>
       {products &&
         products.patagonia &&
         productsContext.products?.patagonia.map((item) => {
@@ -126,7 +126,7 @@ const Products = () => {
               name={item.name}
               desc={item.desc}
               price={item.price}
-              image="https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt12dbddde5342ce4c/648866ff21a8556da61fa167/GOAL_-_Blank_WEB_-_Facebook_-_2023-06-13T135350.847.png?auto=webp&format=pjpg&width=3840&quality=60"
+              image="https://huckberry.imgix.net/spree/products/686940/original/75634_Kavu_Highline_Jacquard_Sweater_Dream_Van_02.jpeg?auto=format%2C%20compress&crop=top&fit=clip&cs=tinysrgb&ixlib=react-9.5.2"
             />
           );
         })}
