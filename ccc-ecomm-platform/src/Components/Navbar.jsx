@@ -22,8 +22,6 @@ const Navbar = () => {
         },
       });
   
-      // console.log(response.data);
-  
       setProducts(response.data);
     }catch(err) {
       console.log("err ",err);

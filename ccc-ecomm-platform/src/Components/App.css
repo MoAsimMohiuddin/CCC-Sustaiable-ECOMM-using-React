@@ -57,8 +57,8 @@ Input:hover {
 
 .navbar {
   /* background: linear-gradient(to right, #e39dff, #5816ff); */
-  background: linear-gradient(to right, #96dfc6, #d2ffe3);
-  /* background-color: #9DDAC6; */
+  /* background: linear-gradient(to right, #96dfc6, #d2ffe3); */
+  background: linear-gradient(to right, #41B3A3, #8EE4AF); 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -221,3 +221,27 @@ button:hover {
 }
 
 /* Cards Style End */
+
+@media screen and (min-width: 768px) {
+  .navbar-links li {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-Input{
+    width: 100%;
+  }
+  .navbar-links {
+    margin-top: 10px;
+  }
+
+  .navbar-links li {
+    margin: 5px;
+  }
+}

@@ -1,42 +1,67 @@
 import { createContext, useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 
-const ProductsContext=createContext({});
+const ProductsContext = createContext({});
 
-const ProductsProvider=({children})=>{
-    console.log("Products Provider");
+const ProductsProvider = ({ children }) => {
+  const [products, setProducts] = useState({});
+  const [filteredProducts, setFilteredProducts] = useState({});
+  const [activeFilters, setActiveFilters] = useState({ brand: "", price: 0 });
 
-    const [products, setProducts]=useState({});
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const response = await axios.get("http://localhost:4000/api", {
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "http://localhost:3000",
+        },
+      });
 
-    const navigate=useNavigate();
+      setProducts(response.data);
+      setFilteredProducts(response.data);
+    };
 
-    useEffect(()=>{
-        const fetchProducts=async ()=>{
-            const response=await axios.get(
-                'http://localhost:4000/api',
-                {
-                    headers: {
-                        "Content-Type": "application/json",
-                        "Access-Control-Allow-Origin": "http://localhost:3000"
-                    }
-                }
-            );
+    fetchProducts();
+  }, []);
 
-            console.log(response.data);
+  const applyFilters = (filters) => {
+    const { brand, price } = filters;
 
-            setProducts(response.data);
-        };
+    let filtered = { ...products };
 
-        fetchProducts();
-    }, []);
+    if (brand) {
+      if (brand === "patagonia") {
+        filtered.tentree = [];
+      } else if (brand === "tentree") {
+        filtered.patagonia = [];
+      }
+    }
 
-    return(
-        <ProductsContext.Provider value={{products, setProducts}}>
-            {children}
-        </ProductsContext.Provider>
-    );
+    if (price > 0) {
+      filtered = {
+        ...filtered,
+        patagonia: filtered.patagonia.filter((product) => product.price <= price),
+        tentree: filtered.tentree.filter((product) => product.price <= price),
+      };
+    }
+
+    setFilteredProducts(filtered);
+    setActiveFilters({ brand, price });
+  };
+
+  const resetFilters = () => {
+    setFilteredProducts(products);
+    setActiveFilters({ brand: "", price: 0 });
+  };
+
+  return (
+    <ProductsContext.Provider
+      value={{ products: filteredProducts, applyFilters, resetFilters, activeFilters, setProducts }}
+    >
+      {children}
+    </ProductsContext.Provider>
+  );
 };
 
 export default ProductsContext;
-export {ProductsProvider};
+export { ProductsProvider };
