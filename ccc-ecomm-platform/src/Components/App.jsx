@@ -4,6 +4,7 @@ import Register from "./Register";
 import Login from "./Login";
 import Missing from "./Missing";
 import Home from "./Home";
+import { ProductsProvider } from "../Context/productsProvider";
 import RequireAuth from "./RequireAuth";
 
 const App = () => {
@@ -11,11 +12,13 @@ const App = () => {
     <BrowserRouter>
       <main>
         <Routes>
-          <Route exact path="/" element={<Navigate to="/register" />} />
+          <Route exact path="/" element={<Navigate to="/home" />} />
           <Route exact path="/register" element={<Register />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/*" element={<Missing />} />
-          <Route exact path="/home" element={<Home />} />
+          <Route exact path="/home" element={
+            <ProductsProvider><Home /></ProductsProvider>
+          } />
         </Routes>
       </main>
     </BrowserRouter>

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital@1&family=Barlow:wght@200&family=Inconsolata&family=Karla:ital,wght@0,700;1,300&family=Nanum+Gothic&family=Pixelify+Sans&family=Ysabeau+Office:wght@200&display=swap');
 
 * {
   margin: 0;
@@ -35,7 +36,9 @@ Input {
   transition: transform 0.3s;
 }
 
-.emailInput, .passwordInput, .submit-button{
+.emailInput,
+.passwordInput,
+.submit-button {
   margin: 10px;
 }
 
@@ -62,13 +65,17 @@ Input:hover {
   padding: 10px 20px;
 }
 
-.navbar-button{
+.navbar-heading {
+  font-family: 'Pixelify Sans', cursive;
+}
+
+.navbar-button {
   margin: 5px;
   padding: 5px;
   transition: transform 0.3s;
 }
 
-.navbar-button:hover{
+.navbar-button:hover {
   transform: scale(1.1);
 }
 
@@ -94,4 +101,123 @@ Input:hover {
   text-decoration: underline;
 }
 
+.show{
+  text-decoration: underline;
+  color: rgb(4, 4, 119);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: inline;
+}
+
+button {
+  border: 1px dotted black;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: white;
+  transition: transform 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background-color: #d8fff2;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: white;
+  z-index: 2;
+  transition: left 0.3s ease-in-out;
+}
+
+.open {
+  left: 0;
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.link {
+  margin: 10px;
+}
+
+.link a {
+  color: black;
+  text-decoration: none;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1; 
+}
+
+.close-button {
+  border: none;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.open-button {
+  border: none;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
 /* Navbar Style End */
+
+/* Cards Style Start */
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.product {
+  /* background: linear-gradient(to right, #e39dff, #5816ff); */
+  /* background: linear-gradient(to right, #CDFAD5, #F6FDC3); */
+  background-color: #9ddac6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  transition: transform 0.2s;
+  width: 15vw;
+  min-width: 100px;
+}
+
+.add-to-cart{
+  width: 8vw;
+  height: 5vh;
+}
+
+/* Cards Style End */

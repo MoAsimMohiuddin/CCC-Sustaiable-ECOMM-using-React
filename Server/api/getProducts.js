@@ -12,7 +12,7 @@ const getProducts = async (req, res) => {
   });
 
   const patagonia =
-    mongoose.models["patagonia"] || mongoose.model("patagonia", schema);
+    mongoose.models["patagonias"] || mongoose.model("patagonias", schema);
   const tentree =
     mongoose.models["tentree"] || mongoose.model("tentree", schema);
 
@@ -22,7 +22,14 @@ const getProducts = async (req, res) => {
   console.log(patagoniaProducts);
   console.log(tentreeProducts);
 
-  res.sendStatus(200);
+  const result=
+  {
+    patagonia: patagoniaProducts,
+    tentree: tentreeProducts
+  };
+
+  res.status(200);
+  res.json(result);
 };
 
 module.exports = getProducts;
