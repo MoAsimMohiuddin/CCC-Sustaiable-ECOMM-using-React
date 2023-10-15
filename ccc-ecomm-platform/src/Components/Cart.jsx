@@ -2,13 +2,16 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useContext } from "react";
 import AuthContext from "../Context/authProvider";
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
+import Sidebar from "./Sidebar";
 
 const Cart = () => {
   const [cart, setCart] = useState({});
   const { auth } = useContext(AuthContext);
   const [price, setPrice] = useState(0);
   const [bought, setBought]=useState(false);
+
+  const navigate=useNavigate();
 
   let keyy = 1;
 
@@ -25,9 +28,9 @@ const Cart = () => {
             }
         );
 
-        console.log(response.data);
+        // console.log(response.data);
     }catch(err) {
-        console.log("err ", err);
+        // console.log("err ", err);
     }
   };
 
@@ -47,6 +50,7 @@ const Cart = () => {
     setBought(true);
     setTimeout(() => {
       setBought(false);
+      navigate('/buynow');
     }, 2000);
   }
 
@@ -64,11 +68,11 @@ const Cart = () => {
           }
         );
 
-        console.log(response.data);
+        // console.log(response.data);
         setCart(response.data);
         setPrice(response.data.total);
       } catch (err) {
-        console.log("err");
+        // console.log("err");
       }
     };
 
@@ -78,6 +82,7 @@ const Cart = () => {
   if (auth.email && price!==0) {
     return (
       <div className="container">
+        <Sidebar/>
         <div>
           <ul className="form-container">
             {cart.result &&
@@ -89,7 +94,7 @@ const Cart = () => {
                 );
               })}
           <button className="buy-now" style={{height: '5vh', marginTop: '20px'}} onClick={handleBuy}>Buy Now</button>
-          {bought && <em><h3 style={{textAlign:'center', marginTop: '20px'}}>Items Ordered</h3></em>}
+          {bought && <em><h3 style={{textAlign:'center', marginTop: '20px'}}>Redirecting to Payment...</h3></em>}
           </ul>
           <h1 style={{ textAlign: "center" }}>Total: {price} $</h1>
         </div>
@@ -97,7 +102,7 @@ const Cart = () => {
     );
   } else if(price===0) {
     return(
-        <div className="container"><h1>Cart is Empty</h1></div>
+        <div className="container"><Sidebar/><h1>Cart is Empty</h1></div>
     )
   }else {
     return <Navigate to="/login" />;

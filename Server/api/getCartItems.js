@@ -10,7 +10,8 @@ const getCartItems=async (req, res)=>{
         email: String,
         password: String,
         patagoniacart: Array,
-        tentreecart: Array
+        tentreecart: Array,
+        boughtItems: Object
     });
     const productsSchema=new mongoose.Schema({
         id: Number,

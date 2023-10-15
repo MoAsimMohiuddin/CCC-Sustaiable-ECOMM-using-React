@@ -19,7 +19,7 @@ const Card = (props) => {
       navigate('/login');
     }
 
-    console.log("Adding to Cart");
+    // console.log("Adding to Cart");
     try {
       const response = await axios.post(
         "http://localhost:4000/api/addtocart",
@@ -42,7 +42,7 @@ const Card = (props) => {
         setShowNotification(false);
       }, 2000);
     } catch (err) {
-      console.log("Err, ", err);
+      // console.log("Err, ", err);
     }
   };
 
@@ -98,7 +98,7 @@ const Products = () => {
   const productsContext = useContext(ProductsContext);
   const { products } = productsContext;
 
-  console.log(products);
+  // console.log(products);
 
   return (
     <div className="cards" id='cards'>

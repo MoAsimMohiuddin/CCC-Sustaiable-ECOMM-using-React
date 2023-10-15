@@ -8,6 +8,7 @@ import { ProductsProvider } from "../Context/productsProvider";
 import RequireAuth from "./RequireAuth";
 import Cart from "./Cart";
 import Profile from "./Profile";
+import Buynow from "./Buynow";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route exact path="/home" element={
             <ProductsProvider><Home /></ProductsProvider>
           } />
+          <Route exact path='/buynow' element={<Buynow/>}/>
           <Route exact path='/cart' element={<Cart/>}/>
           <Route exact path='/profile' element={<Profile/>}/>
           <Route exact path="/*" element={<Missing />} />

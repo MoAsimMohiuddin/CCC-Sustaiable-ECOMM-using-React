@@ -111,9 +111,9 @@ const Navbar = () => {
       <h1 className="navbar-heading">GreenThreads</h1>
       <ul className="navbar-links">
         <li>
-          <a className="link" href="/home">
+          <Link className="link" to="/home">
             Home
-          </a>
+          </Link>
         </li>
         <li>
         <Link

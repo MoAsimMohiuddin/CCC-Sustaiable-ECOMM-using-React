@@ -38,8 +38,8 @@ const Login = () => {
         }
       );
 
-      console.log("response");
-      console.log(response.data);
+      // console.log("response");
+      // console.log(response.data);
 
       useAuth.setAuth({ email: emailInput, accessToken: response.data.jwt });
 

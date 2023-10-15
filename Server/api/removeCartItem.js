@@ -15,6 +15,7 @@ const removeItem = async (req, res) => {
     password: String,
     patagoniacart: Array,
     tentreecart: Array,
+    boughtItems: Object
   });
   const productsSchema = new mongoose.Schema({
     id: Number,

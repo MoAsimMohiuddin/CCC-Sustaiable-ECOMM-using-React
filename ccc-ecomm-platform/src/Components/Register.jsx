@@ -41,7 +41,7 @@ const Register = () => {
         return;
       }
     } catch (err) {
-      console.log("err ", err);
+      // console.log("err ", err);
       if (err?.response?.status === 404) {
         setErrStatus(true);
         setErr("No Response from Server");

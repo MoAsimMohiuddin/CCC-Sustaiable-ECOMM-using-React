@@ -2,6 +2,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import AuthContext from "../Context/authProvider";
+import Sidebar from "./Sidebar";
 
 const HistoryCard = (props) => {
   return (
@@ -49,10 +50,11 @@ const Profile = () => {
     fetchData();
   }, []);
 
-  if (auth?.accessToken) {
-    return (
-      <div className="history-container">
-        <h1 style={{ textAlign: "center" }}>Your Order History</h1>
+  if(auth?.accessToken) {
+    return(
+        <div className="history-container">
+          <Sidebar/>
+        <h1 style={{textAlign: 'center'}}>Your Order History</h1>
         {error && <p>Error fetching data</p>}
         <ul className="hist-prod-container">
           {prod?.patagonia?.map((element) => (
@@ -75,9 +77,9 @@ const Profile = () => {
           ))}
         </ul>
       </div>
-    );
-  } else {
-    return <Navigate to="/login" />;
+    )
+  }else{
+    return <Navigate to='/login'/>
   }
 };
 

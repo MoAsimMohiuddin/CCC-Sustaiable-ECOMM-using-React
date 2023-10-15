@@ -21,6 +21,7 @@ const addToCart = async (req, res) => {
 
   if (req.body.brand === "patagonia") {
     if (userData?.patagoniacart) {
+      console.log("exists")
       try {
         await model.replaceOne(
           { email: email },
@@ -42,6 +43,7 @@ const addToCart = async (req, res) => {
       }
     } else {
       try {
+        console.log("Doesn't exists")
         await model.replaceOne(
           { email: email },
           {
@@ -51,7 +53,7 @@ const addToCart = async (req, res) => {
             __v: userData["__v"],
             patagoniacart: [id],
             tentreecart: userData.tentreecart,
-            boughtItems: userData.boughtItems,
+            // boughtItems: userData.boughtItems,
           }
         );
 
@@ -93,7 +95,7 @@ const addToCart = async (req, res) => {
             __v: userData["__v"],
             patagoniacart: userData.patagoniacart,
             tentreecart: [id],
-            boughtItems: userData.boughtItems,
+            // boughtItems: userData.boughtItems,
           }
         );
 
