@@ -1,7 +1,8 @@
 const express=require('express');
-const mongoose=require('mongoose');
+const limitter=require('express-rate-limit');
 require('dotenv').config();
 const cors=require('cors');
+
 const app=express();
 
 const corsOptions = {
@@ -14,8 +15,27 @@ app.use(cors(corsOptions));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
-app.use('/register', require('./Routes/register'));
-app.use('/login', require('./Routes/login'));
+app.use('/register', limitter(
+    {
+        windowMs: 5000,
+        max: 5,
+        message: {
+            code: 429,
+            message: 'Rate Limit Exceeded, Please Try again after some time.' 
+        }
+    }
+), require('./Routes/register'));
+
+app.use('/login', limitter(
+    {
+        windowMs: 5000,
+        max: 5,
+        message: {
+            code: 429,
+            message: 'Rate Limit Exceeded, Please Try again after some time.' 
+        }
+    }
+), require('./Routes/login'));
 app.use('/api', require('./Routes/api'));
 app.use('/verifytoken', require('./Routes/verifyToken'));
 

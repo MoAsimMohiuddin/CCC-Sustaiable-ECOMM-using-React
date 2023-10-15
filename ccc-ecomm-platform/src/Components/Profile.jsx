@@ -69,6 +69,7 @@ const Profile = () => {
             <HistoryCard
               key={element.id}
               image={element.url}
+              name={element.name}
               price={element.price}
             />
           ))}

@@ -38,6 +38,7 @@ const Login = () => {
         }
       );
 
+      console.log("response");
       console.log(response.data);
 
       useAuth.setAuth({ email: emailInput, accessToken: response.data.jwt });
@@ -48,6 +49,8 @@ const Login = () => {
 
       if (err.response.status === 401) {
         setErr("Unautheticated");
+      }else if(err.response.status===429){
+        setErr("Too Many Requests. Please Try Again Later");
       } else {
         setErr("Server Err");
       }

@@ -45,6 +45,8 @@ const Register = () => {
       if (err?.response?.status === 404) {
         setErrStatus(true);
         setErr("No Response from Server");
+      } else if(err.response.status===429){
+        setErr("Too Many Requests. Please Try Again Later");
       } else if (err.response.status === 409) {
         setErrStatus(true);
         setErr("Email Already Taken");
