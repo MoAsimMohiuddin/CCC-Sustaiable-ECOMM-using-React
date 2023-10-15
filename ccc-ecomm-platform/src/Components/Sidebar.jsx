@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import AuthContext from "../Context/authProvider";
 import ProductsContext from "../Context/productsProvider";
-import axios from "axios";
+// import axios from "axios";
 
 const Sidebar = () => {
   const [opened, setOpened] = useState(false);
@@ -14,7 +14,7 @@ const Sidebar = () => {
   const [price, setPrice] = useState(0);
   const [minPrice, setMinPrice] = useState(0);
 
-  const { applyFilters, resetFilters, setProducts } =
+  const { applyFilters, resetFilters} =
     useContext(ProductsContext);
 
   const handleFormSubmit = async (event) => {

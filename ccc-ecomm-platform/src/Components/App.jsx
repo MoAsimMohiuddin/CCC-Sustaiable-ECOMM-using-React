@@ -5,7 +5,6 @@ import Login from "./Login";
 import Missing from "./Missing";
 import Home from "./Home";
 import { ProductsProvider } from "../Context/productsProvider";
-import RequireAuth from "./RequireAuth";
 import Cart from "./Cart";
 import Profile from "./Profile";
 import Buynow from "./Buynow";

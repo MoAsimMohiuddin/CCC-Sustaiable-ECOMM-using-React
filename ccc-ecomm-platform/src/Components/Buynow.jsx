@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import Sidebar from "./Sidebar";
+import { useNavigate } from "react-router-dom";
 
 const Buynow = () => {
+  const [msg, setMsg]=useState(false);
+
+  const navigate=useNavigate();
+
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -14,6 +19,12 @@ const Buynow = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setMsg(true);
+
+    setTimeout(()=>{
+      setMsg(false);
+      navigate('/home');
+    }, 2500);
   };
 
   const handleChange = (event) => {
@@ -91,6 +102,7 @@ const Buynow = () => {
         >
           Place Order
         </button>
+        {msg && <h3>Order Recieved. Thank you.</h3>}
       </form>
     </div>
   );

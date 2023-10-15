@@ -1,4 +1,4 @@
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import AuthContext from "../Context/authProvider";
@@ -23,7 +23,7 @@ const Profile = () => {
   const [error, setError] = useState(false);
   const { auth } = useContext(AuthContext);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const fetchData = async () => {
     try {

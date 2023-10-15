@@ -21,7 +21,7 @@ const Card = (props) => {
 
     // console.log("Adding to Cart");
     try {
-      const response = await axios.post(
+      await axios.post(
         "http://localhost:4000/api/addtocart",
         JSON.stringify({
           brand: props.brand,
