@@ -12,23 +12,24 @@ const Buynow = () => {
     cvv: "",
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  const handleSubmit = (event) => {
+    event.preventDefault();
   };
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (event) => {
+    setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
   return (
     <div className="container">
-        <Sidebar/>
-      <form style={{width: '40vw'}} className="form-container" onSubmit={handleSubmit}>
+      <Sidebar />
+      <form
+        style={{ width: "40vw" }}
+        className="form-container"
+        onSubmit={handleSubmit}
+      >
         <h2 className="payment-header">Place Your Order</h2>
-        <label className="label" htmlFor="fullName">
+        <label htmlFor="fullName">
           Full Name
         </label>
         <input
@@ -52,8 +53,9 @@ const Buynow = () => {
           value={formData.address}
           onChange={handleChange}
         />
-        <label style={{padding: '0px'}}>Payment Method</label>
-        <select style={{padding: '10px'}}
+        <label style={{ padding: "0px" }}>Payment Method</label>
+        <select
+          style={{ padding: "10px" }}
           name="paymentMethod"
           value={formData.paymentMethod}
           onChange={handleChange}
@@ -83,7 +85,10 @@ const Buynow = () => {
           value={formData.cvv}
           onChange={handleChange}
         />
-        <button style={{padding: '5px', margin: '5px'}} type="submit" disabled={isSubmitting}>
+        <button
+          style={{ padding: "5px", margin: "5px" }}
+          type="submit"
+        >
           Place Order
         </button>
       </form>

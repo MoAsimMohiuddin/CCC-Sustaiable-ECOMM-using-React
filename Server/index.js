@@ -17,7 +17,7 @@ app.use(express.json());
 
 app.use('/register', limitter(
     {
-        windowMs: 5000,
+        windowMs: 1000*60*5,
         max: 5,
         message: {
             code: 429,
@@ -28,7 +28,7 @@ app.use('/register', limitter(
 
 app.use('/login', limitter(
     {
-        windowMs: 5000,
+        windowMs:1000*60*5,
         max: 5,
         message: {
             code: 429,

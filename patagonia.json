@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "name": "Brodeo Beanie",
+    "desc": "A classic cuff beanie made with a warm, comfortable recycled wool/recycled nylon blend. Made in a Fair Trade Certified™ factory. Hardworking yet Easy-Wearing Yarn Blend. Warm and comfortable recycled wool/recycled nylon blend provides a snug fit that will loosen with wear",
+    "price": 49,
+    "url": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw8034754b/images/hi-res/29206_FING.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f5f5f5"
+  },
+  {
+    "id": 2,
+    "name": "Men's Storm Shift Jacket",
+    "desc": "The waterproof, windproof Storm Shift Jacket is made of fully PFC-free GORE-TEX material—that means the fabric, membrane and DWR finish do not contain perfluorinated chemicals. A unique liner is warm and wicks moisture to provide lasting storm protection and comfort for skiers and boarders getting out in all types of conditions. With a refined fit, clean styling and technical features, the Storm Shift Jacket is built to complement a rider's natural movement. Fair Trade Certified™ sewn.",
+    "price": 499,
+    "url": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw181abe30/images/hi-res/31745_GRBN.jpg?sw=512&sh=512&sfrm=png&q=95&bgcolor=f5f5f5"
+  },
+  {
+    "id": 3,
+    "name": "Men's Storm Shift Pants - Regular",
+    "desc": "The waterproof, windproof Storm Shift Pants are made of fully PFC-free GORE-TEX material—that means the fabric, membrane and DWR finish do not contain perfluorinated chemicals. A unique liner is warm and wicks moisture to provide lasting storm protection and comfort for skiers and boarders getting out in all types of conditions. With a refined fit, clean styling and technical features, Storm Shift Pants are built to complement a rider's natural movement. Fair Trade Certified™ sewn.",
+    "price": 399,
+    "url": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwc91392eb/images/hi-res/31770_MEBN.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f5f5f5"
+  },
+  {
+    "id": 4,
+    "name": "Powder Town Beanie",
+    "desc": "Made with 100% recycled polyester with a textured knit construction, this timeless beanie is itch-free and quick-drying. Made in a Fair Trade Certified™ factory. Comfortable Fabric. Made from soft and comfortable 100% recycled polyester with a textured knit construction. Rib-Knit Cuff. The 3 rib-knit cuff holds in heat and keeps your hat in place. Pom-Pom Styling. With a pom-pom on top, just for fun. Made in a Fair Trade Certified™ Factory. Made in a Fair Trade Certified™ factory, which means the people who made this product earned a premium for their labor",
+    "price": 49,
+    "url": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw53ac0e42/images/hi-res/29187_PKMA.jpg?sw=512&sh=512&sfrm=png&q=95&bgcolor=f5f5f5"
+  },
+  {
+    "id": 5,
+    "name": "Men's Capilene® Air Crew",
+    "desc": "With its innovative, seamless 3D-knit structure, our Capilene® Air Crew offers amazing warmth and comfort range. An airy blend of 51% responsibly sourced merino wool and 49% recycled polyester wicks moisture, resists odor and dries in a flash. Greatest Range of Warmth and Comfort. Fine merino wool from New Zealand is blended with Capilene® recycled polyester for enhanced warmth. balanced with improved wicking, durability and dry time",
+    "price": 49,
+    "url": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw61bd3fe7/images/hi-res/36516_NUVG.jpg?sw=512&sh=512&sfrm=png&q=95&bgcolor=f5f5f5"
+  },
+  {
+    "id": 6,
+    "name": "Men's Insulated Powder Town Jacket",
+    "desc": "Fully featured for versatility and focused on mobility, the Insulated Powder Town Jacket has an H2No® Performance Standard 2-layer shell for waterproof/breathable and windproof protection from the elements. A blend of Thermogreen® 100% recycled polyester insulation (80 grams in body, 40 grams in sleeves) creates targeted warmth, and an articulated fit allows freedom of movement. A smooth taffeta liner provides comfort and snag-free layering. Fair Trade",
+    "price": 399,
+    "url": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwfc18882c/images/hi-res/31195_OBPL.jpg?sw=512&sh=512&sfrm=png&q=95&bgcolor=f5f5f5"
+  },
+  {
+    "id": 7,
+    "name": "Men's Capilene® Midweight Zip-Neck",
+    "desc": "A classic, all-around 100% recycled polyester baselayer. The smooth, soft face makes for easy layering. Hollow-core yarns and a diamond-grid back trap warm air, wick moisture and dry fast. HeiQ® Pure odor control keeps things fresh. Made in a Fair Trade Certified™ factory. Our Most Versatile Baselayer. Smooth, soft face makes for easy layering; HeiQ® Pure odor. control keeps things fresh. Zip-Neck Styling. Zip-neck styling with internal neck tape for added comfort; locker loop for hang drying",
+    "price": 89,
+    "url": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwf2f22831/images/hi-res/44447_SMDB.jpg?sw=512&sh=512&sfrm=png&q=95&bgcolor=f5f5f5"
+  },
+  {
+    "id": 8,
+    "name": "Men's Powder Town Jacket",
+    "desc": "Fully PFC-free, featured for versatility and focused on mobility, the Powder Town Jacket has an H2No® Performance Standard 2-layer shell for waterproof/breathable and windproof protection, an articulated fit for freedom of movement and a smooth mesh liner for comfort and easy layering. Fair Trade Certified™ sewn. Durable 2-layer 100% Recycled Fabric Is PFC-Free. Durable H2No®. Performance Standard 2-layer 100% postconsumer recycled polyester shell with waterproof/breathable and windproof protection that's fully PFC-free—that means the fabric, membrane and DWR finish do not contain perfluorinated chemicals; smooth lining for comfort and layering",
+    "price": 349,
+    "url": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwfd03fc01/images/hi-res/31625_PSLG.jpg?sw=512&sh=512&sfrm=png&q=95&bgcolor=f5f5f5"
+  },
+  {
+    "id": 9,
+    "name": "Baby All Seasons 3-in-1 Jacket",
+    "desc": "In cold, wet weather, the Baby All Seasons 3-in-1 Jacket does it all. The waterproof, windproof shell and cozy fleece snap-out jacket can be worn together or separately for protection from rainy, chilly and blustery weather. Made in a Fair Trade Certified™ factory.",
+    "price": 159,
+    "url": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw34529eaa/images/hi-res/61380_NTPL.jpg?sw=512&sh=512&sfrm=png&q=95&bgcolor=f5f5f5"
+  },
+  {
+    "id": 10,
+    "name": "Kids' Micro D® Snap-T® Fleece Jacket",
+    "desc": "Snap-T styling meets our 100% recycled polyester Micro D fleece to create a soft, comfortable, full-zip hooded jacket for kids. Made in a Fair Trade Certified™ factory.",
+    "price": 75,
+    "url": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw0115916a/images/hi-res/65465_SPRB_OPEN.jpg?sw=512&sh=512&sfrm=png&q=95&bgcolor=f5f5f5"
+  },
+  {
+    "id": 11,
+    "name": "Baby Furry Friends Fleece Hat",
+    "desc": "Warm, cozy and adorable—the Baby Furry Friends Hat is made with 100% recycled polyester high-pile, double-faced fleece. Made in a Fair Trade Certified™ factory.",
+    "price": 35,
+    "url": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw6c3f1c72/images/hi-res/60560_VSTA_BACK.jpg?sw=512&sh=512&sfrm=png&q=95&bgcolor=f5f5f5"
+  },
+  {
+    "id": 12,
+    "name": "Men's Capilene® Midweight Zip-Neck",
+    "desc": "A classic, all-around 100% recycled polyester baselayer. The smooth, soft face makes for easy layering. Hollow-core yarns and a diamond-grid back trap warm air, wick moisture and dry fast. HeiQ® Pure odor control keeps things fresh. Made in a Fair Trade Certified™ factory..",
+    "price": 85,
+    "url": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw7375fe80/images/hi-res/44447_BLK_JB1.jpg?sw=512&sh=512&sfrm=png&q=95&bgcolor=f5f5f5"
+  },
+  {
+    "id": 13,
+    "name": "Take a Stand Trucker Hat",
+    "desc": "As anglers, we see firsthand the dramatic effects of climate change on our fisheries and, ultimately, our planet. We must protect our home waters and keeping plastics out of marine environments is key. The Take a Stand Trucker Hat has a brim made of Bureo’s fully traceable NetPlus® 100% recycled fishing nets. This classic mid-crown trucker hat features an organic cotton front, a recycled polyester-mesh back and an adjustable snap closure. Made in a Fair Trade Certified™ factory..",
+    "price": 19,
+    "url": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw0dbb8fa8/images/hi-res/38356_NEWI.jpg?sw=512&sh=512&sfrm=png&q=95&bgcolor=f5f5f5"
+  },
+  {
+    "id": 14,
+    "name": "Fitz Roy Horizons Trucker Hat",
+    "desc": "Featuring a brim made with Bureo’s fully traceable NetPlus® 100% recycled fishing nets, our classic mid-crown trucker hat features an organic cotton front, a recycled polyester-mesh back and an adjustable snap closure. Made in a Fair Trade Certified™ factory.",
+    "price": 19,
+    "url": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw839b2551/images/hi-res/38292_LAGB.jpg?sw=512&sh=512&sfrm=png&q=95&bgcolor=f5f5f5"
+  },
+  {
+    "id": 15,
+    "name": "Baby Pita Pocket Mittens",
+    "desc": "Keep your baby’s hands warm in these soft fleece mittens with a moisture-wicking lining and ribbed cuffs for easy on/off. Made in a Fair Trade Certified™ factory.",
+    "price": 17,
+    "url": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw780061d9/images/hi-res/60549_APBL.jpg?sw=512&sh=512&sfrm=png&q=95&bgcolor=f5f5f5"
+  }
+]
