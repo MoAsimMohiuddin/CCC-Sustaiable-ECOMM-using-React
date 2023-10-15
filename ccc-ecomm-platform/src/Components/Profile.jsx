@@ -49,10 +49,10 @@ const Profile = () => {
     fetchData();
   }, []);
 
-  if(auth?.accessToken) {
-    return(
-        <div className="history-container">
-        <h1 style={{textAlign: 'center'}}>Your Order History</h1>
+  if (auth?.accessToken) {
+    return (
+      <div className="history-container">
+        <h1 style={{ textAlign: "center" }}>Your Order History</h1>
         {error && <p>Error fetching data</p>}
         <ul className="hist-prod-container">
           {prod?.patagonia?.map((element) => (
@@ -68,16 +68,15 @@ const Profile = () => {
           {prod?.tentree?.map((element) => (
             <HistoryCard
               key={element.id}
-              image='https://huckberry.imgix.net/spree/products/686940/original/75634_Kavu_Highline_Jacquard_Sweater_Dream_Van_02.jpeg?auto=format%2C%20compress&crop=top&fit=clip&cs=tinysrgb&ixlib=react-9.5.2'
-              name={element.name}
+              image={element.url}
               price={element.price}
             />
           ))}
         </ul>
       </div>
-    )
-  }else{
-    return <Navigate to='/login'/>
+    );
+  } else {
+    return <Navigate to="/login" />;
   }
 };
 

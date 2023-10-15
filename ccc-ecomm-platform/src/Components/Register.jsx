@@ -54,12 +54,6 @@ const Register = () => {
 
   return (
     <div className="full-container">
-      <div className="heading-container">
-        <h1 className="login-heading">GreenThreads</h1>
-        <h3>
-          Style that respects the Earth - Where fashion meets sustainability.
-        </h3>
-      </div>
       <div className="container" onSubmit={handleSubmit}>
         <form className="form-container">
           {errStatus ? <p className="err">{err}</p> : null}
@@ -86,6 +80,12 @@ const Register = () => {
           <p>Already Registered?</p>
           <Link to="/login">Login</Link>
         </form>
+      </div>
+      <div className="heading-container" style={{marginRight: '8vw'}}>
+        <h1 className="login-heading">GreenThreads</h1>
+        <h3>
+          Style that respects the Earth - Where fashion meets sustainability.
+        </h3>
       </div>
     </div>
   );

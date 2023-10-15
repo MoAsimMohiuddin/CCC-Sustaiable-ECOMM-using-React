@@ -15,7 +15,8 @@ const Card = (props) => {
 
   const handleAddToCart = async () => {
     if (!useAuth.auth.accessToken) {
-      navigate("/login");
+      alert("Please Login First");
+      navigate('/login');
     }
 
     console.log("Adding to Cart");
@@ -55,7 +56,7 @@ const Card = (props) => {
   };
 
   return (
-    <div className="product">
+    <div className={`product${showFullDescription ? ' expand' : ''}`}>
       <div className="product-image">
         <img src={props.image} alt="Product" />
       </div>
@@ -98,39 +99,40 @@ const Products = () => {
   const { products } = productsContext;
 
   console.log(products);
+
   return (
     <div className="cards" id='cards'>
-      {products &&
-        products.patagonia &&
-        productsContext.products?.patagonia.map((item) => {
-          return (
-            <Card
-              key={item.id}
-              brand="patagonia"
-              id={item.id}
-              name={item.name}
-              desc={item.desc}
-              price={item.price}
-              image={item.url}
-            />
-          );
-        })}
-      {products &&
-        products.tentree &&
-        productsContext.products?.tentree.map((item) => {
-          return (
-            <Card
-              key={item.id}
-              brand="tentree"
-              id={item.id}
-              name={item.name}
-              desc={item.desc}
-              price={item.price}
-              image="https://huckberry.imgix.net/spree/products/686940/original/75634_Kavu_Highline_Jacquard_Sweater_Dream_Van_02.jpeg?auto=format%2C%20compress&crop=top&fit=clip&cs=tinysrgb&ixlib=react-9.5.2"
-            />
-          );
-        })}
-    </div>
+    {products &&
+      products.patagonia &&
+      productsContext.products?.patagonia.map((item) => {
+        return (
+          <Card
+            key={item.id}
+            brand="patagonia"
+            id={item.id}
+            name={item.name}
+            desc={item.desc}
+            price={item.price}
+            image={item.url}
+          />
+        );
+      })}
+    {products &&
+      products.tentree &&
+      productsContext.products?.tentree.map((item) => {
+        return (
+          <Card
+            key={item.id}
+            brand="tentree"
+            id={item.id}
+            name={item.name}
+            desc={item.desc}
+            price={item.price}
+            image={item.url}
+          />
+        );
+      })}
+  </div>
   );
 };
 

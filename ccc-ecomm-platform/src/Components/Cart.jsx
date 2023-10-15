@@ -8,7 +8,7 @@ const Cart = () => {
   const [cart, setCart] = useState({});
   const { auth } = useContext(AuthContext);
   const [price, setPrice] = useState(0);
-
+  const [bought, setBought]=useState(false);
 
   let keyy = 1;
 
@@ -43,6 +43,11 @@ const Cart = () => {
         }
     );
     console.log(response.data);
+
+    setBought(true);
+    setTimeout(() => {
+      setBought(false);
+    }, 2000);
   }
 
   useEffect(() => {
@@ -84,6 +89,7 @@ const Cart = () => {
                 );
               })}
           <button className="buy-now" style={{height: '5vh', marginTop: '20px'}} onClick={handleBuy}>Buy Now</button>
+          {bought && <em><h3 style={{textAlign:'center', marginTop: '20px'}}>Items Ordered</h3></em>}
           </ul>
           <h1 style={{ textAlign: "center" }}>Total: {price} $</h1>
         </div>

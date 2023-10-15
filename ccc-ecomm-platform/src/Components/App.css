@@ -241,7 +241,7 @@ button:hover {
 
 /* Cards Style Start */
 
-.cards {
+/* .cards {
   background-color: #00a18c;
   display: flex;
   flex-wrap: wrap;
@@ -250,8 +250,6 @@ button:hover {
 
 .product {
   display: inline-block;
-  /* background: linear-gradient(to right, #e39dff, #5816ff); */
-  /* background: linear-gradient(to right, #CDFAD5, #F6FDC3); */
   background-color: #9DDAC6;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   margin: 20px;
@@ -261,6 +259,39 @@ button:hover {
   transition: transform 0.2s;
   width: 15vw;
   min-width: 100px;
+} */
+
+.cards {
+  background-color: #00a18c;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #9DDAC6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  transition: transform 0.2s;
+  width: 15vw;
+  min-width: 100px;
+  overflow: hidden;
+}
+
+.product.expand {
+  height: auto;
+}
+
+.product:hover {
+  transform: scale(1.1);
+  height: auto;
 }
 
 .product:hover {
@@ -269,7 +300,7 @@ button:hover {
 
 .product-image {
   width: 100%;
-  height: 29%;
+  height: 28%;
   overflow: hidden;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -313,18 +344,40 @@ button:hover {
 }
 
 .hist-prod-container{
-  margin-left: 7vw;
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .cards {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .product {
+    width: 40vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .product {
+    width: 80vw;
+  }
 }
 
 /* Cards Style End */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 901px) {
   .navbar-links li {
     margin-right: 30px;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
