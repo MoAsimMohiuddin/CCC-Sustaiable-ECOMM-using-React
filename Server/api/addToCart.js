@@ -53,7 +53,7 @@ const addToCart = async (req, res) => {
             __v: userData["__v"],
             patagoniacart: [id],
             tentreecart: userData.tentreecart,
-            // boughtItems: userData.boughtItems,
+            boughtItems: userData.boughtItems,
           }
         );
 
@@ -95,7 +95,7 @@ const addToCart = async (req, res) => {
             __v: userData["__v"],
             patagoniacart: userData.patagoniacart,
             tentreecart: [id],
-            // boughtItems: userData.boughtItems,
+            boughtItems: userData.boughtItems,
           }
         );
 

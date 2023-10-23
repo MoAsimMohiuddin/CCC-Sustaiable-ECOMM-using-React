@@ -17,7 +17,8 @@ const getCartItems=async (req, res)=>{
         id: Number,
         name: String,
         desc: String,
-        price: Number
+        price: Number,
+        url: String
     });
 
     const userModel=mongoose.models['users'] || mongoose.model('users', usersSchema);

@@ -84,6 +84,7 @@ const Cart = () => {
       <div className="container">
         <Sidebar/>
         <div>
+          <h1 style={{textAlign:'center'}}>Your Shopping Cart</h1>
           <ul className="form-container">
             {cart.result &&
               cart.result.map((element) => {

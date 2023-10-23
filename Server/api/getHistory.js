@@ -23,6 +23,7 @@ const getHistory = async (req, res) => {
       name: String,
       desc: String,
       price: Number,
+      url: String
     });
 
     const userModel =
